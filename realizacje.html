@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nasze realizacje – Sport Data</title>
+  <meta name="description" content="Zobacz realizacje Sport Data: systemy kontroli dostępu, sprawdzarki, kołowroty i automaty biletowe wdrożone na targach, stadionach, w muzeach i obiektach turystycznych.">
+  <meta name="theme-color" content="#ed7c00">
+  <meta property="og:title" content="Nasze realizacje – Sport Data">
+  <meta property="og:description" content="Zobacz realizacje Sport Data: systemy kontroli dostępu, sprawdzarki, kołowroty i automaty biletowe wdrożone na targach, stadionach, w muzeach i obiektach turystycznych.">
+  <meta property="og:image" content="assets/img/hero-card-960.webp">
+  <meta property="og:locale" content="pl_PL">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/realizacje.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/realizacje.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="top">
+    <div class="navbar__inner">
+      <a class="navbar__logo" href="index.html" aria-label="Sport Data – strona główna">
+        <img src="assets/icons/logo.svg" width="188" height="48" alt="Sport Data">
+      </a>
+
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Menu główne">
+        <ul class="navbar__links">
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="oferta.html#urzadzenia">Produkty</a></li>
+          <li><a href="realizacje.html" aria-current="page">Realizacje</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pomoc.html">Pomoc</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a class="btn btn--secondary btn--lg" href="kontakt.html">Poznaj ofertę</a>
+          <a class="btn btn--primary btn--lg btn--glow" href="tel:+48508582856">Zadzwoń</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container page-top">
+      <nav class="breadcrumbs" aria-label="Okruszki">
+        <ol>
+          <li><span aria-current="page">Realizacje</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ============ LISTA REALIZACJI (Figma 739:3077) ============ -->
+    <section class="section realizations" aria-labelledby="realizations-title">
+      <div class="container">
+        <header class="page-intro realizations__intro">
+          <h1 class="h-page" id="realizations-title">Nasze realizacje</h1>
+          <p>Jesteśmy przede wszystkim partnerem w tym procesie. Mamy świadomość, jak ważna jest taka inwestycja dla klienta, i wspieramy naszych klientów na każdym jej etapie.</p>
+        </header>
+
+        <!-- Filtr po tagu: realizacje.html?tag=<slug> (js/pages/realizacje.js). Bez JS widoczne są wszystkie realizacje. -->
+        <div class="realizations__filter" data-tag-filter hidden>
+          <p class="filter-chip">
+            <span>Tag: <strong data-tag-label></strong></span>
+            <a class="filter-chip__clear" href="realizacje.html" aria-label="Usuń filtr i pokaż wszystkie realizacje">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </a>
+          </p>
+          <p class="realizations__empty" data-tag-empty hidden>Brak realizacji z wybranym tagiem. <a href="realizacje.html">Pokaż wszystkie realizacje</a></p>
+        </div>
+
+        <!-- CMS: lista realizacji; data-tags = slugi zastosowań (oddzielone spacją) używane przez filtr ?tag= -->
+        <ul class="realizations__list" data-tag-list>
+          <li id="targi-kielce" data-tags="hala-targowa przestrzen-konferencyjna parking">
+            <article class="realization" aria-labelledby="r1-title">
+              <a class="realization__media" href="realizacja.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/realizacje/turnstile-960.webp"
+                     srcset="assets/img/realizacje/turnstile-640.webp 640w, assets/img/realizacje/turnstile-960.webp 960w, assets/img/realizacje/turnstile-1280.webp 1280w, assets/img/realizacje/turnstile-1760.webp 1760w"
+                     sizes="(min-width: 1024px) 880px, 92vw" width="880" height="280" alt="" fetchpriority="high">
+              </a>
+              <h2 class="visually-hidden" id="r1-title">Realizacja: Nazwa klienta</h2>
+              <dl class="realization__meta">
+                <div><dt>Klient</dt><dd>Nazwa klienta</dd></div>
+                <div><dt>Data</dt><dd>Data realizacji</dd></div>
+                <div><dt>Strona internetowa</dt><dd><a href="https://www.adres.pl" target="_blank" rel="noopener">www.adres.pl</a></dd></div>
+              </dl>
+              <ul class="tags realization__tags" aria-label="Produkty użyte w realizacji">
+                <li><a class="tag" href="produkt.html">Produkt 1</a></li>
+                <li><a class="tag" href="produkt.html">Produkt 2</a></li>
+                <li><a class="tag" href="produkt.html">Produkt 3</a></li>
+              </ul>
+              <a class="link-arrow" href="realizacja.html">Przeczytaj o realizacji<span class="visually-hidden">: Nazwa klienta</span>
+                <img src="assets/icons/arrow-orange.svg" width="20" height="20" alt="">
+              </a>
+            </article>
+          </li>
+
+          <li id="mtp" data-tags="hala-targowa stadion hala-sportowa">
+            <article class="realization" aria-labelledby="r2-title">
+              <a class="realization__media" href="realizacja.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/realizacje/turnstile-960.webp"
+                     srcset="assets/img/realizacje/turnstile-640.webp 640w, assets/img/realizacje/turnstile-960.webp 960w, assets/img/realizacje/turnstile-1280.webp 1280w, assets/img/realizacje/turnstile-1760.webp 1760w"
+                     sizes="(min-width: 1024px) 880px, 92vw" width="880" height="280" alt="" loading="lazy">
+              </a>
+              <h2 class="visually-hidden" id="r2-title">Realizacja: Nazwa klienta</h2>
+              <dl class="realization__meta">
+                <div><dt>Klient</dt><dd>Nazwa klienta</dd></div>
+                <div><dt>Data</dt><dd>Data realizacji</dd></div>
+                <div><dt>Strona internetowa</dt><dd><a href="https://www.adres.pl" target="_blank" rel="noopener">www.adres.pl</a></dd></div>
+              </dl>
+              <ul class="tags realization__tags" aria-label="Produkty użyte w realizacji">
+                <li><a class="tag" href="produkt.html">Produkt 1</a></li>
+                <li><a class="tag" href="produkt.html">Produkt 2</a></li>
+                <li><a class="tag" href="produkt.html">Produkt 3</a></li>
+              </ul>
+              <a class="link-arrow" href="realizacja.html">Przeczytaj o realizacji<span class="visually-hidden">: Nazwa klienta</span>
+                <img src="assets/icons/arrow-orange.svg" width="20" height="20" alt="">
+              </a>
+            </article>
+          </li>
+
+          <li id="zoo" data-tags="zoo obiekt-turystyczny muzeum">
+            <article class="realization" aria-labelledby="r3-title">
+              <a class="realization__media" href="realizacja.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/realizacje/turnstile-960.webp"
+                     srcset="assets/img/realizacje/turnstile-640.webp 640w, assets/img/realizacje/turnstile-960.webp 960w, assets/img/realizacje/turnstile-1280.webp 1280w, assets/img/realizacje/turnstile-1760.webp 1760w"
+                     sizes="(min-width: 1024px) 880px, 92vw" width="880" height="280" alt="" loading="lazy">
+              </a>
+              <h2 class="visually-hidden" id="r3-title">Realizacja: Nazwa klienta</h2>
+              <dl class="realization__meta">
+                <div><dt>Klient</dt><dd>Nazwa klienta</dd></div>
+                <div><dt>Data</dt><dd>Data realizacji</dd></div>
+                <div><dt>Strona internetowa</dt><dd><a href="https://www.adres.pl" target="_blank" rel="noopener">www.adres.pl</a></dd></div>
+              </dl>
+              <ul class="tags realization__tags" aria-label="Produkty użyte w realizacji">
+                <li><a class="tag" href="produkt.html">Produkt 1</a></li>
+                <li><a class="tag" href="produkt.html">Produkt 2</a></li>
+                <li><a class="tag" href="produkt.html">Produkt 3</a></li>
+              </ul>
+              <a class="link-arrow" href="realizacja.html">Przeczytaj o realizacji<span class="visually-hidden">: Nazwa klienta</span>
+                <img src="assets/icons/arrow-orange.svg" width="20" height="20" alt="">
+              </a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ OPINIE (kopia sekcji z index.html) ============ -->
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head section-head--narrow">
+          <h2 class="h-display" id="reviews-title">Opinie naszych klientów</h2>
+          <p class="text-body-lg">Poznaj historie i doświadczenia naszych klientów.</p>
+        </header>
+
+        <div class="carousel" data-carousel>
+          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Poprzednia opinia" data-carousel-prev>
+            <img src="assets/icons/arrow-left.svg" width="24" height="24" alt="">
+          </button>
+
+          <ul class="carousel__track" data-carousel-track aria-label="Opinie klientów" tabindex="0">
+            <li class="carousel__slide">
+              <!-- TODO: href = link do opinii w Google -->
+              <a class="review" href="#" target="_blank" rel="noopener">
+                <img class="review__stars" src="assets/icons/stars.svg" width="116" height="19" alt="Ocena: 5 na 5">
+                <blockquote class="review__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</blockquote>
+                <div class="review__author">
+                  <img src="assets/img/avatar-placeholder.webp" width="56" height="56" alt="">
+                  <div>
+                    <p class="review__name">Name Surname</p>
+                    <p class="review__role">Position, Company name</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="carousel__slide">
+              <!-- Opinia z Google bez danych autora – wiersz autora jest ukryty -->
+              <a class="review" href="#" target="_blank" rel="noopener">
+                <img class="review__stars" src="assets/icons/stars.svg" width="116" height="19" alt="Ocena: 5 na 5">
+                <blockquote class="review__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</blockquote>
+              </a>
+            </li>
+            <li class="carousel__slide">
+              <a class="review" href="#" target="_blank" rel="noopener">
+                <img class="review__stars" src="assets/icons/stars.svg" width="116" height="19" alt="Ocena: 5 na 5">
+                <blockquote class="review__text">Świetna firma zajmująca się sprawdzarkami, skanerami, bramkami i wieloma innymi rzeczami, które montuje na stadionach, obiektach sportowych, muzeach innych miejscach, gdzie takie usługi są potrzebne. Profesjonalni i doświadczeni ludzie, którzy znają się na rzeczy. Wiele firm, znajdujących się kilkaset kilometrów od Sportdaty, korzysta z usług, bo wiedzą, że nie zawiodą się na niej.</blockquote>
+                <div class="review__author">
+                  <img src="assets/img/avatar-filip.webp" width="56" height="56" alt="">
+                  <div>
+                    <p class="review__name">Filip Ordakowski</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Następna opinia" data-carousel-next>
+            <img src="assets/icons/arrow-right.svg" width="24" height="24" alt="">
+          </button>
+
+          <div class="carousel__dots" data-carousel-dots role="group" aria-label="Wybierz slajd"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__main">
+          <address class="footer__contacts">
+            <div class="contact">
+              <img src="assets/icons/ic-phone.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">Telefon</h2>
+              <p class="contact__note">Jesteśmy dla Państwa dostępni <br class="br-md">od poniedziałku do piątku <br class="br-md">w godzinach 8-16.</p>
+              <p class="contact__value">
+                <a href="tel:+48508582856">tel. 508 582 856</a><br>
+                <a href="tel:+48585500183">tel./fax: 58/550 01 83</a>
+              </p>
+            </div>
+            <div class="contact">
+              <img src="assets/icons/ic-pin.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">Biuro</h2>
+              <p class="contact__note">W celu obejrzenia urządzeń umawiamy się z klientami indywidualnie.</p>
+              <p class="contact__value">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=ul.+Kasztanowa+13a,+81-515+Gdynia" target="_blank" rel="noopener">ul. Kasztanowa 13a,<br>81-515 Gdynia</a>
+              </p>
+            </div>
+            <div class="contact">
+              <img src="assets/icons/ic-mail.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">E-mail</h2>
+              <p class="contact__note">Zachęcamy do załączenia od razu jak największej ilości informacji.</p>
+              <p class="contact__value"><a href="mailto:biuro@sportdata.pl">biuro@sportdata.pl</a></p>
+            </div>
+          </address>
+
+          <a class="footer__logo" href="index.html" aria-label="Sport Data – strona główna">
+            <img src="assets/icons/logo-white.svg" width="249" height="64" alt="Sport Data">
+            <img class="footer__tagline" src="assets/icons/logo-tagline.svg" width="222" height="10" alt="Open yourself to safety">
+          </a>
+        </div>
+
+        <div class="footer__side">
+          <nav class="footer__nav" aria-label="Menu w stopce">
+            <ul>
+              <li><a href="pomoc.html">Pomoc techniczna</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="oferta.html">Oferta</a></li>
+              <li><a href="oferta.html#urzadzenia">Produkty</a></li>
+              <li><a href="realizacje.html">Realizacje</a></li>
+            </ul>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="o-nas.html">O nas</a></li>
+              <li><a href="index.html">Strona główna</a></li>
+            </ul>
+          </nav>
+          <ul class="footer__social" aria-label="Media społecznościowe">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/ic-facebook.svg" width="24" height="24" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/ic-linkedin.svg" width="24" height="24" alt=""></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/ic-instagram.svg" width="24" height="24" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__credits">
+        <p>© 2025 Sportdata. All rights reserved.</p>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

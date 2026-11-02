@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Oferta / Produkt / Usługa – style stron (Figma 383:4212, 367:2140, 912:1741)
+   Mobile-first. Korzysta z tokenów i komponentów z css/styles.css.
+   ========================================================================== */
+
+/* ---------- Nagłówek sekcji (H2 48 + opis 18, czarny) ---------- */
+.offer-head { margin-bottom: clamp(40px, 4.4vw, 64px); }
+.offer-head .text-body-lg { color: var(--black); }
+
+/* ---------- Usługi: 2 kolumny tytuł + opis + „Przejdź do usługi” ---------- */
+.services {
+  display: grid; gap: 40px 32px;
+  margin: 0 0 clamp(48px, 4.4vw, 64px); padding: 0; list-style: none;
+}
+@media (min-width: 900px) { .services { grid-template-columns: 1fr 1fr; } }
+.service { display: grid; gap: 12px; justify-items: start; align-content: start; }
+.service__title {
+  padding-block: 8px;
+  font-size: clamp(24px, .8vw + 18px, 32px); line-height: 1.125; font-weight: 700; letter-spacing: -.015em;
+}
+.service__text { max-width: 640px; padding-bottom: 16px; font-size: 16px; line-height: 1.5; }
+
+/* ---------- Siatka produktów (rozszerza .products__grid / .product ze strony głównej) ---------- */
+.catalog { row-gap: 32px; align-items: start; }
+.catalog .product__media { border-radius: 0; background: var(--gray-100); }
+.catalog .product__text { margin-top: -16px; }
+.catalog .link-arrow { align-self: flex-start; }
+.catalog .product__media--light { background: #dbd9d7; }       /* tło zdjęcia palmtopa */
+.catalog .product__media--soft { background: #f5f5f5; }       /* śluza */
+.catalog .product__media--panel { background: #f6f6f4; box-shadow: 0 8px 18px rgba(0, 0, 0, .1), 0 33px 33px rgba(0, 0, 0, .09), 0 75px 45px rgba(0, 0, 0, .05); }
+
+/* Kasa samoobsługowa (selfpos): ekran aplikacji na pomarańczowym tle */
+.catalog .product__media--selfpos { position: relative; background: var(--orange-50); }
+.product__media--selfpos img {
+  position: absolute; left: 50%; top: 11.84%; transform: translateX(-50%);
+  width: 55.6%; height: auto; aspect-ratio: 169 / 300; object-fit: cover;
+  border: 2px solid #fffbf6; border-bottom: 0; border-radius: 8px 8px 0 0;
+  box-shadow: 0 6px 14px rgba(70, 35, 1, .14), 0 26px 26px rgba(70, 35, 1, .12), 0 57px 34px rgba(70, 35, 1, .07);
+}
+.product:hover .product__media--selfpos img { transform: translateX(-50%) scale(1.03); }
+
+/* Neutralny placeholder (szare pole z projektu – zdjęcie dojdzie z CMS) */
+.ph { display: block; background: var(--gray-100); }
+
+/* ---------- Realizacje: wiersze tekst + zdjęcie (Portfolio / 15) ---------- */
+.showcase { display: grid; gap: 48px; margin: 0; padding: 0; list-style: none; }
+.showcase__row { display: grid; gap: 24px; padding-top: 48px; border-top: 1px solid var(--gray-500); }
+.showcase__media { display: block; overflow: hidden; aspect-ratio: 616 / 384; background: var(--gray-100); }
+.showcase__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.showcase__row:hover .showcase__media img { transform: scale(1.03); }
+.showcase__body { display: grid; align-content: center; justify-items: start; }
+@media (min-width: 900px) {
+  .showcase__row { grid-template-columns: 1fr 1fr; gap: 80px; }
+  .showcase__media { order: 2; }
+}
+
+.case-card__title { font-size: clamp(24px, .8vw + 18px, 32px); line-height: 1.3; font-weight: 700; }
+.case-card__title a:hover { color: var(--orange-700); }
+.case-card__text { margin-top: 8px; max-width: 560px; font-size: 16px; line-height: 1.5; }
+.case-card .tags { gap: 8px; padding-top: 16px; }
+.view-link {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 32px;
+  font-size: 16px; line-height: 1.5;
+}
+.view-link img { transition: transform .2s var(--ease); }
+.view-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.view-link:hover img { transform: translateX(3px); }
+
+/* Karty realizacji w 3 kolumnach (usługa) */
+.cases-grid {
+  display: grid; gap: 48px; margin: 0; padding: 0; list-style: none;
+  border-top: 1px solid var(--gray-500);
+}
+@media (min-width: 700px)  { .cases-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cases-grid { grid-template-columns: repeat(3, 1fr); } }
+.cases-grid > .case-card { display: flex; flex-direction: column; }
+.cases-grid .case-card__media { display: block; aspect-ratio: 405 / 384; margin-bottom: clamp(24px, 2.8vw, 40px); }
+.cases-grid .view-link { align-self: flex-start; }
+
+/* „Zobacz wszystkie realizacje ↗” – wariant 18px z projektu */
+.btn-line--lg { margin-top: 40px; gap: 12px; padding: 12px 16px; border-color: var(--black); font-size: clamp(16px, .5vw + 14px, 18px); color: var(--black); white-space: nowrap; }
+.btn-line--lg img { width: 23px; height: 23px; margin: 4.5px; }
+
+.section-cta { margin-top: clamp(40px, 4.4vw, 64px); }
+
+/* ==========================================================================
+   PRODUKT – galeria + opis
+   ========================================================================== */
+.pdp { display: grid; gap: 48px; align-items: start; }
+@media (min-width: 1024px) { .pdp { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 5.6vw, 80px); } }
+
+/* Galeria: główne zdjęcie + max. 3 miniatury (po lewej na desktopie, pod zdjęciem na mobile) */
+.gallery { display: grid; gap: 12px; grid-template-areas: "main" "thumbs"; }
+.gallery__main {
+  grid-area: main; position: relative; overflow: hidden;
+  aspect-ratio: 520 / 640; max-height: 80vh; width: 100%;
+  border: 1px solid var(--white); border-radius: var(--radius);
+  background: #e9e9e9;
+  filter: drop-shadow(0 18px 19.5px rgba(214, 214, 214, .1)) drop-shadow(0 70px 35px rgba(214, 214, 214, .09));
+}
+.gallery__main img { width: 100%; height: 100%; object-fit: cover; }
+.gallery__thumbs { grid-area: thumbs; display: flex; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.gallery__thumb, .gallery__thumbs .ph {
+  display: block; flex: none; width: 64px; aspect-ratio: 80 / 100; overflow: hidden; border-radius: 4px;
+}
+.gallery__thumb { outline-offset: 2px; transition: opacity .2s var(--ease), box-shadow .2s var(--ease); }
+.gallery__thumb:hover { opacity: .85; box-shadow: 0 0 0 2px var(--orange-700); }
+.gallery__thumb img { width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 560px) {
+  .gallery { grid-template-columns: 80px minmax(0, 1fr); grid-template-areas: "thumbs main"; gap: 16px; }
+  .gallery__thumbs { flex-direction: column; gap: 16px; }
+  .gallery__thumb, .gallery__thumbs .ph { width: 80px; }
+  .gallery__main { max-height: none; }
+}
+/* Brak miniatur → brak podziału, główne zdjęcie na całą szerokość */
+.gallery--single { grid-template-columns: minmax(0, 1fr); grid-template-areas: "main"; }
+
+.pdp__info { display: grid; gap: 32px; align-content: start; }
+.pdp__desc { display: grid; gap: 24px; }
+.pdp__title { font-size: clamp(32px, 1vw + 26px, 40px); line-height: 1.2; font-weight: 700; }
+.pdp__lead { font-size: 16px; line-height: 1.5; color: var(--gray-600); }
+.pdp__accordion { gap: 24px; }
+
+/* Przełącznik wersji kolorystycznych (aria-pressed) */
+.variants { display: grid; gap: 12px; }
+.variants__label { font-size: 16px; line-height: 1.5; font-weight: 500; }
+.variants__list { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+.variant {
+  padding: 11px 23px; border: 1px solid #262626; border-radius: 4px;
+  font-size: 16px; line-height: 1.5; color: #292d2c; background: var(--white);
+  transition: background-color .2s var(--ease), color .2s var(--ease);
+}
+.variant:hover:not(:disabled) { background: var(--light-grey); }
+.variant[aria-pressed="true"] { background: #262626; color: var(--white); }
+.variant:disabled { opacity: .25; border-color: var(--black); color: var(--black); cursor: not-allowed; }
+
+/* ==========================================================================
+   USŁUGA – opis + karta wyceny
+   ========================================================================== */
+.svc { display: grid; gap: 48px; align-items: start; }
+.svc__main { display: grid; gap: 32px; }
+@media (min-width: 1024px) {
+  .svc { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 5.6vw, 80px); }
+  .svc__aside { padding-top: 80px; position: sticky; top: calc(var(--nav-h) - 56px); }
+}

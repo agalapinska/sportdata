@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – Sport Data</title>
+  <meta name="description" content="Skontaktuj się z Sport Data: biuro@sportdata.pl, tel. 508 582 856, tel./fax 58 550 01 83. Biuro: ul. Kasztanowa 13a, 81-515 Gdynia.">
+  <meta name="theme-color" content="#ed7c00">
+  <meta property="og:title" content="Kontakt – Sport Data">
+  <meta property="og:description" content="Skontaktuj się z Sport Data: biuro@sportdata.pl, tel. 508 582 856, tel./fax 58 550 01 83. Biuro: ul. Kasztanowa 13a, 81-515 Gdynia.">
+  <meta property="og:image" content="assets/img/hero-card-960.webp">
+  <meta property="og:locale" content="pl_PL">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/info.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="top">
+    <div class="navbar__inner">
+      <a class="navbar__logo" href="index.html" aria-label="Sport Data – strona główna">
+        <img src="assets/icons/logo.svg" width="188" height="48" alt="Sport Data">
+      </a>
+
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Menu główne">
+        <ul class="navbar__links">
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="oferta.html#urzadzenia">Produkty</a></li>
+          <li><a href="realizacje.html">Realizacje</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pomoc.html">Pomoc</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a class="btn btn--secondary btn--lg" href="kontakt.html">Poznaj ofertę</a>
+          <a class="btn btn--primary btn--lg btn--glow" href="tel:+48508582856">Zadzwoń</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="contact-page">
+
+    <div class="contact-page__top">
+      <img class="contact-page__map" src="assets/img/world-map.svg" width="1773" height="760" alt="" aria-hidden="true" fetchpriority="low">
+
+      <!-- ============ NAGŁÓWEK (Figma 764:1551) ============ -->
+      <header class="contact-page__header">
+        <div class="container">
+          <div class="page-intro contact-page__intro">
+            <h1 class="h-page">Jesteśmy firmą z Polski</h1>
+            <p>Urządzenia do kontroli dostępu to nowoczesne rozwiązania zapewniające bezpieczeństwo i optymalizację zarządzania przestrzenią — od biur po obiekty przemysłowe.</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- ============ KONTAKT + FORMULARZ (Figma 400:15777) ============ -->
+      <section class="contact-page__main" aria-label="Dane kontaktowe i formularz">
+        <div class="container contact-page__grid">
+          <div class="contact-page__info">
+            <div class="info-block">
+              <h2 class="info-block__title">E-mail</h2>
+              <p class="info-block__text">Zachęcamy do załączenia od razu jak największej ilości informacji.</p>
+              <p class="info-block__value"><a href="mailto:biuro@sportdata.pl">biuro@sportdata.pl</a></p>
+            </div>
+            <div class="info-block">
+              <h2 class="info-block__title">Telefon</h2>
+              <p class="info-block__text">Jesteśmy dla Państwa dostępni od poniedziałku do piątku w godzinach 8-16.</p>
+              <p class="info-block__value">
+                <a href="tel:+48508582856">tel. 508 582 856</a><br>
+                <a href="tel:+48585500183">tel./fax: 58/550 01 83</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__head">
+              <h2 class="h-page" id="form-title">Napisz do nas</h2>
+              <p>Jeżeli masz pytanie lub chcesz nam coś powiedzieć to jesteśmy otwarci na wszystkie Wasze uwagi, propozycje lub pytania.</p>
+            </div>
+            <!-- CMS: endpoint formularza (action) – obsługa wysyłki w js/main.js (TODO) -->
+            <form class="form contact-card__form" data-form action="#" method="post" novalidate>
+              <label class="field"><span class="field__label">Mail na który mamy odpisać</span>
+                <input class="field__input" type="email" name="email" autocomplete="email" inputmode="email" required></label>
+              <label class="field"><span class="field__label">Treść Twojej wiadomości</span>
+                <textarea class="field__input" name="message" placeholder="Kliknij, żeby napisać ..." required></textarea></label>
+              <label class="field--check"><input type="checkbox" name="consent" required> <span>Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a></span></label>
+              <button class="btn btn--dark" type="submit">Wyślij wiadomość</button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ LOKALIZACJA (Figma 401:15992) ============ -->
+    <section class="contact-page__location" aria-labelledby="location-title">
+      <div class="container">
+        <div class="page-intro contact-page__intro">
+          <h2 class="h-page" id="location-title">Lokalizacja</h2>
+          <p>Odwiedź nasze biuro, gdzie pasja spotyka się z technologią — tutaj projektujemy rozwiązania, które chronią przestrzeń i wspierają inteligentne zarządzanie</p>
+        </div>
+
+        <div class="location">
+          <div class="location__side">
+            <div class="info-block">
+              <h3 class="info-block__title">Biuro</h3>
+              <p class="info-block__text">W celu obejrzenia urządzeń umawiamy się z klientami indywidualnie.</p>
+              <address class="info-block__value">ul. Kasztanowa 13a,<br>81-515 Gdynia</address>
+            </div>
+            <img class="location__eu" src="assets/img/kontakt/eu-funding-720.webp"
+                 srcset="assets/img/kontakt/eu-funding-360.webp 360w, assets/img/kontakt/eu-funding-720.webp 720w, assets/img/kontakt/eu-funding-1080.webp 1080w"
+                 sizes="355px" width="355" height="56" loading="lazy"
+                 alt="Fundusze Europejskie, Rzeczpospolita Polska, Dofinansowane przez Unię Europejską">
+          </div>
+
+          <!-- CMS: mapa – osadzenie interaktywnej mapy (iframe Google Maps) wymaga zgody na cookies podmiotów trzecich; do tego czasu placeholder z linkiem -->
+          <a class="location__map" href="https://www.google.com/maps/search/?api=1&amp;query=ul.+Kasztanowa+13a,+81-515+Gdynia" target="_blank" rel="noopener">
+            <img src="assets/img/kontakt/map-placeholder.webp" width="616" height="716" alt="" loading="lazy">
+            <span class="location__map-label">Otwórz w Mapach Google <img src="assets/icons/arrow-orange.svg" width="20" height="20" alt=""><span class="visually-hidden"> (otwiera się w nowej karcie)</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__main">
+          <address class="footer__contacts">
+            <div class="contact">
+              <img src="assets/icons/ic-phone.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">Telefon</h2>
+              <p class="contact__note">Jesteśmy dla Państwa dostępni <br class="br-md">od poniedziałku do piątku <br class="br-md">w godzinach 8-16.</p>
+              <p class="contact__value">
+                <a href="tel:+48508582856">tel. 508 582 856</a><br>
+                <a href="tel:+48585500183">tel./fax: 58/550 01 83</a>
+              </p>
+            </div>
+            <div class="contact">
+              <img src="assets/icons/ic-pin.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">Biuro</h2>
+              <p class="contact__note">W celu obejrzenia urządzeń umawiamy się z klientami indywidualnie.</p>
+              <p class="contact__value">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=ul.+Kasztanowa+13a,+81-515+Gdynia" target="_blank" rel="noopener">ul. Kasztanowa 13a,<br>81-515 Gdynia</a>
+              </p>
+            </div>
+            <div class="contact">
+              <img src="assets/icons/ic-mail.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">E-mail</h2>
+              <p class="contact__note">Zachęcamy do załączenia od razu jak największej ilości informacji.</p>
+              <p class="contact__value"><a href="mailto:biuro@sportdata.pl">biuro@sportdata.pl</a></p>
+            </div>
+          </address>
+
+          <a class="footer__logo" href="index.html" aria-label="Sport Data – strona główna">
+            <img src="assets/icons/logo-white.svg" width="249" height="64" alt="Sport Data">
+            <img class="footer__tagline" src="assets/icons/logo-tagline.svg" width="222" height="10" alt="Open yourself to safety">
+          </a>
+        </div>
+
+        <div class="footer__side">
+          <nav class="footer__nav" aria-label="Menu w stopce">
+            <ul>
+              <li><a href="pomoc.html">Pomoc techniczna</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="oferta.html">Oferta</a></li>
+              <li><a href="oferta.html#urzadzenia">Produkty</a></li>
+              <li><a href="realizacje.html">Realizacje</a></li>
+            </ul>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="o-nas.html">O nas</a></li>
+              <li><a href="index.html">Strona główna</a></li>
+            </ul>
+          </nav>
+          <ul class="footer__social" aria-label="Media społecznościowe">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/ic-facebook.svg" width="24" height="24" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/ic-linkedin.svg" width="24" height="24" alt=""></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/ic-instagram.svg" width="24" height="24" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__credits">
+        <p>© 2025 Sportdata. All rights reserved.</p>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

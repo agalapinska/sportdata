@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Sport Data – Realizacje (lista: Figma 739:3077) + Realizacja (Figma 367:2449)
+   Wspólny arkusz dla realizacje.html i realizacja.html. Mobile-first.
+   ========================================================================== */
+
+/* Neutralny placeholder w miejscu szarych prostokątów z projektu */
+.placeholder { display: block; background: var(--gray-100); }
+
+/* ---------- Karta realizacji (lista + „Inne realizacje”) ---------- */
+.realization { display: flex; flex-direction: column; gap: 32px; height: 100%; }
+.realization__media {
+  display: block; overflow: hidden; border-radius: var(--radius);
+  aspect-ratio: 2 / 1; background: var(--gray-100);
+}
+.realization__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.realization:hover .realization__media img { transform: scale(1.03); }
+
+.realization__meta {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 32px;
+  margin: 0; font-size: 16px; line-height: 1.5; color: var(--black);
+}
+.realization__meta > div { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.realization__meta > div:nth-child(3) { grid-column: 1 / -1; }
+.realization__meta dt { font-weight: 700; }
+.realization__meta dd { margin: 0; overflow-wrap: anywhere; }
+.realization__meta a, .realization__site, .case-meta a { text-decoration: underline; text-underline-offset: 2px; }
+.realization__meta a:hover, .realization__site:hover, .case-meta a:hover { color: var(--orange-700); }
+
+/* tagi w projekcie realizacji: Roboto Regular 14 (wspólne .tag ma 600) */
+.realization__tags { gap: 8px; }
+.realization__tags .tag { font-weight: 400; }
+.realization .tags { margin-top: -12px; } /* meta → tagi: 20px */
+.realization .link-arrow { align-self: flex-start; }
+
+@media (min-width: 768px) {
+  .realization__meta { grid-template-columns: 184px 184px minmax(0, 1fr); }
+  .realization__meta > div:nth-child(3) { grid-column: auto; }
+}
+@media (min-width: 1024px) {
+  .realization__media { aspect-ratio: 880 / 280; }
+}
+
+/* Wariant kompaktowy („Inne realizacje”, Figma 720:1840) */
+.realization--compact { gap: 20px; }
+.realization--compact .realization__media { border-radius: 4px; aspect-ratio: 632 / 280; }
+.realization--compact .tags { margin-top: 12px; }        /* wiersz meta → tagi: 32px */
+.realization--compact .link-arrow { margin-top: 12px; }  /* tagi → link: 32px */
+.realization__row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 32px; }
+.realization__meta--inline { grid-template-columns: 1fr; gap: 20px; }
+.realization__meta--inline > div { grid-template-columns: 80px auto; gap: 8px; }
+.realization__meta--inline > div:nth-child(3) { grid-column: auto; }
+@media (min-width: 768px) { .realization__meta--inline { grid-template-columns: 1fr; } }
+.realization__site { font-size: 16px; line-height: 1.5; text-align: right; overflow-wrap: anywhere; }
+
+/* ==========================================================================
+   NASZE REALIZACJE – lista
+   ========================================================================== */
+.realizations__intro p { color: var(--black); }
+.realizations__list { display: grid; gap: clamp(48px, 4.4vw, 64px); max-width: 880px; margin-top: clamp(48px, 5.6vw, 80px); }
+
+/* Filtr ?tag= */
+.realizations__filter { display: grid; justify-items: start; gap: 16px; margin-top: 32px; }
+.realizations__filter:not([hidden]) + .realizations__list { margin-top: 40px; }
+
+/* Okruszki z jednym elementem (lista realizacji) – w projekcie bez tła */
+.breadcrumbs li:only-child [aria-current="page"] { margin-left: -12px; background: none; font-weight: 500; }
+.filter-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 4px 4px 12px; border-radius: 4px;
+  background: var(--orange-50); color: var(--orange-900);
+  font-size: 14px; line-height: 1.5; font-weight: 500;
+}
+.filter-chip strong { font-weight: 700; }
+.filter-chip__clear {
+  display: grid; place-items: center; width: 28px; height: 28px; border-radius: 4px;
+  transition: background-color .2s var(--ease);
+}
+.filter-chip__clear:hover { background: var(--orange-100); }
+.realizations__empty { font-size: 16px; color: var(--gray-600); }
+.realizations__empty a { color: var(--orange-700); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ==========================================================================
+   REALIZACJA – case study
+   ========================================================================== */
+.page-top:has(+ .case-study) { padding-bottom: 20px; }
+.case-study { background: var(--gray-25); }
+
+/* ---------- Nagłówek: zdjęcie na całą szerokość + tytuł i meta ---------- */
+.case-hero__media {
+  position: relative; overflow: hidden;
+  aspect-ratio: 3 / 2; max-height: 720px; width: 100%;
+  background: var(--gray-100);
+}
+/* Figma: object-bottom na rozciągniętym zdjęciu; kadr 50% 30% pokazuje całe ekrany sprawdzarek */
+.case-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+/* wewnętrzny cień od dołu (Figma: inset shadow) */
+.case-hero__media::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 -348px 139px rgba(0, 0, 0, .01), inset 0 -196px 117px rgba(0, 0, 0, .05), inset 0 -87px 87px rgba(0, 0, 0, .09), inset 0 -22px 48px rgba(0, 0, 0, .1);
+}
+@media (min-width: 768px)  { .case-hero__media { aspect-ratio: 2 / 1; } }
+@media (min-width: 1024px) { .case-hero__media { aspect-ratio: 1440 / 600; } }
+
+.case-hero__body { display: grid; gap: 40px 80px; padding-block: var(--section-y); }
+.case-hero__intro { display: grid; gap: 24px; justify-items: start; min-width: 0; }
+.case-hero__title { font-size: clamp(36px, 2.8vw + 16px, 56px); line-height: 1.2; font-weight: 700; color: var(--black); }
+.case-hero__lead { font-size: clamp(16px, .2vw + 15px, 18px); line-height: 1.5; color: var(--black); max-width: 768px; }
+
+.case-meta {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px;
+  margin: 0; font-size: 16px; line-height: 1.5; align-content: start;
+}
+.case-meta > div { display: grid; gap: 8px; min-width: 0; }
+.case-meta dt { font-weight: 700; }
+.case-meta dd { margin: 0; overflow-wrap: anywhere; }
+.case-meta__wide { grid-column: 1 / -1; }
+
+@media (min-width: 1024px) {
+  .case-hero__body { grid-template-columns: minmax(0, 1fr) minmax(0, 464px); }
+}
+
+/* ---------- Treść + przyklejona karta „Zapytaj o ofertę” ---------- */
+.case-body__inner { display: grid; gap: 56px 80px; align-items: start; }
+.case-body__aside { max-width: 560px; width: 100%; }
+
+@media (min-width: 1024px) {
+  .case-body__inner { grid-template-columns: minmax(0, 768fr) minmax(320px, 464fr); align-items: stretch; }
+  .case-body__aside { max-width: none; }
+  /* sticky tylko na desktopie */
+  .case-body__aside .quote-card { position: sticky; top: calc(var(--nav-h) + 24px); }
+}
+
+/* Rich text realizacji – rozmiary z projektu (Content / 31) */
+.case-prose { max-width: 768px; }
+.case-prose h2 { font-size: clamp(28px, 1.5vw + 18px, 40px); line-height: 1.2; padding-block: 24px 8px; margin-top: 0; }
+.case-prose h3 { margin-top: 40px; font-size: clamp(24px, .8vw + 18px, 32px); line-height: 1.3; }
+.case-prose h3 + * { margin-top: 20px; }
+.case-prose .lead { margin-top: 20px; font-size: clamp(18px, .2vw + 17px, 20px); line-height: 1.4; font-weight: 700; }
+.case-prose figure { margin-block: clamp(40px, 4.4vw, 64px); }
+.case-prose__img { width: 100%; aspect-ratio: 768 / 400; }
+.case-prose figcaption { margin-top: 16px; border-left-color: var(--black); color: var(--black); }
+.case-prose blockquote { margin-block: 36px 32px; padding-left: 24px; border-left: 2px solid var(--black); line-height: 28px; }
+.case-prose blockquote + * { margin-top: 32px; }
+
+/* ---------- Produkty użyte w realizacji ---------- */
+.case-products__head { margin-bottom: clamp(40px, 5.6vw, 80px); }
+.case-products__head .h-page { margin-top: 0; }
+.eyebrow { font-size: 16px; line-height: 1.5; font-weight: 600; color: var(--black); }
+.case-products__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 16px; }
+@media (min-width: 768px) { .case-products__grid { gap: 48px 32px; } }
+@media (min-width: 900px) { .case-products__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.case-product { display: flex; flex-direction: column; }
+.case-product__media { aspect-ratio: 1; margin-bottom: 16px; transition: background-color .2s var(--ease); }
+.case-product:hover .case-product__media { background: var(--gray-200); }
+.case-product__name { font-size: clamp(16px, .2vw + 15px, 18px); line-height: 1.5; font-weight: 600; }
+.case-product__name a:hover { color: var(--orange-700); }
+.case-product__variant { font-size: 14px; line-height: 1.5; }
+
+/* ---------- Inne realizacje ---------- */
+.other-cases { background: var(--white); }
+.other-cases__list { display: grid; gap: 56px 48px; }
+@media (min-width: 768px) { .other-cases__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

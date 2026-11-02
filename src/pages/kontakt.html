@@ -1,0 +1,91 @@
+<!--page
+{"title": "Kontakt – Sport Data",
+ "description": "Skontaktuj się z Sport Data: biuro@sportdata.pl, tel. 508 582 856, tel./fax 58 550 01 83. Biuro: ul. Kasztanowa 13a, 81-515 Gdynia.",
+ "nav": "",
+ "css": ["css/pages/info.css"]}
+-->
+<main id="main" class="contact-page">
+
+    <div class="contact-page__top">
+      <img class="contact-page__map" src="assets/img/world-map.svg" width="1773" height="760" alt="" aria-hidden="true" fetchpriority="low">
+
+      <!-- ============ NAGŁÓWEK (Figma 764:1551) ============ -->
+      <header class="contact-page__header">
+        <div class="container">
+          <div class="page-intro contact-page__intro">
+            <h1 class="h-page">Jesteśmy firmą z Polski</h1>
+            <p>Urządzenia do kontroli dostępu to nowoczesne rozwiązania zapewniające bezpieczeństwo i optymalizację zarządzania przestrzenią — od biur po obiekty przemysłowe.</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- ============ KONTAKT + FORMULARZ (Figma 400:15777) ============ -->
+      <section class="contact-page__main" aria-label="Dane kontaktowe i formularz">
+        <div class="container contact-page__grid">
+          <div class="contact-page__info">
+            <div class="info-block">
+              <h2 class="info-block__title">E-mail</h2>
+              <p class="info-block__text">Zachęcamy do załączenia od razu jak największej ilości informacji.</p>
+              <p class="info-block__value"><a href="mailto:biuro@sportdata.pl">biuro@sportdata.pl</a></p>
+            </div>
+            <div class="info-block">
+              <h2 class="info-block__title">Telefon</h2>
+              <p class="info-block__text">Jesteśmy dla Państwa dostępni od poniedziałku do piątku w godzinach 8-16.</p>
+              <p class="info-block__value">
+                <a href="tel:+48508582856">tel. 508 582 856</a><br>
+                <a href="tel:+48585500183">tel./fax: 58/550 01 83</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__head">
+              <h2 class="h-page" id="form-title">Napisz do nas</h2>
+              <p>Jeżeli masz pytanie lub chcesz nam coś powiedzieć to jesteśmy otwarci na wszystkie Wasze uwagi, propozycje lub pytania.</p>
+            </div>
+            <!-- CMS: endpoint formularza (action) – obsługa wysyłki w js/main.js (TODO) -->
+            <form class="form contact-card__form" data-form action="#" method="post" novalidate>
+              <label class="field"><span class="field__label">Mail na który mamy odpisać</span>
+                <input class="field__input" type="email" name="email" autocomplete="email" inputmode="email" required></label>
+              <label class="field"><span class="field__label">Treść Twojej wiadomości</span>
+                <textarea class="field__input" name="message" placeholder="Kliknij, żeby napisać ..." required></textarea></label>
+              <label class="field--check"><input type="checkbox" name="consent" required> <span>Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a></span></label>
+              <button class="btn btn--dark" type="submit">Wyślij wiadomość</button>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ LOKALIZACJA (Figma 401:15992) ============ -->
+    <section class="contact-page__location" aria-labelledby="location-title">
+      <div class="container">
+        <div class="page-intro contact-page__intro">
+          <h2 class="h-page" id="location-title">Lokalizacja</h2>
+          <p>Odwiedź nasze biuro, gdzie pasja spotyka się z technologią — tutaj projektujemy rozwiązania, które chronią przestrzeń i wspierają inteligentne zarządzanie</p>
+        </div>
+
+        <div class="location">
+          <div class="location__side">
+            <div class="info-block">
+              <h3 class="info-block__title">Biuro</h3>
+              <p class="info-block__text">W celu obejrzenia urządzeń umawiamy się z klientami indywidualnie.</p>
+              <address class="info-block__value">ul. Kasztanowa 13a,<br>81-515 Gdynia</address>
+            </div>
+            <img class="location__eu" src="assets/img/kontakt/eu-funding-720.webp"
+                 srcset="assets/img/kontakt/eu-funding-360.webp 360w, assets/img/kontakt/eu-funding-720.webp 720w, assets/img/kontakt/eu-funding-1080.webp 1080w"
+                 sizes="355px" width="355" height="56" loading="lazy"
+                 alt="Fundusze Europejskie, Rzeczpospolita Polska, Dofinansowane przez Unię Europejską">
+          </div>
+
+          <!-- CMS: mapa – osadzenie interaktywnej mapy (iframe Google Maps) wymaga zgody na cookies podmiotów trzecich; do tego czasu placeholder z linkiem -->
+          <a class="location__map" href="https://www.google.com/maps/search/?api=1&amp;query=ul.+Kasztanowa+13a,+81-515+Gdynia" target="_blank" rel="noopener">
+            <img src="assets/img/kontakt/map-placeholder.webp" width="616" height="716" alt="" loading="lazy">
+            <span class="location__map-label">Otwórz w Mapach Google <img src="assets/icons/arrow-orange.svg" width="20" height="20" alt=""><span class="visually-hidden"> (otwiera się w nowej karcie)</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+</main>

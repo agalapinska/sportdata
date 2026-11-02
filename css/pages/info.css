@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Strony informacyjne: O nas (.about), Polityka prywatności (.legal),
+   Centrum pomocy (.help), Kontakt (.contact-page)
+   Mobile-first; wymaga css/styles.css (tokeny, .prose, .form, .btn--dark …)
+   ========================================================================== */
+
+/* ---------- Wspólne ---------- */
+.info-title {
+  font-size: clamp(36px, 2.8vw + 16px, 56px); /* H1 56 */
+  line-height: 1.2; font-weight: 700; color: var(--black);
+}
+.info-date { font-size: clamp(16px, .2vw + 15px, 18px); line-height: 1.5; color: var(--black); }
+
+/* ==========================================================================
+   O NAS (Figma 767:1094)
+   ========================================================================== */
+.about__intro { padding-top: clamp(48px, 8.3vw, 120px); }
+.about__grid { display: grid; gap: 32px 80px; align-items: start; }
+.about__title {
+  font-size: clamp(28px, 1.5vw + 18px, 40px); line-height: 1.2; font-weight: 700; color: var(--black);
+  text-wrap: balance;
+}
+.about__body { display: grid; gap: clamp(40px, 5vw, 64px); min-width: 0; }
+.about__text { display: grid; gap: 16px; font-size: 16px; line-height: 1.5; color: var(--black); }
+.about__facts { border-bottom: 1px solid var(--black); }
+.about__facts li {
+  padding-block: 20px; border-top: 1px solid var(--black);
+  font-size: 16px; line-height: 1.5; font-weight: 700; color: var(--black);
+}
+@media (min-width: 1024px) {
+  .about__grid { grid-template-columns: minmax(0, 464fr) minmax(0, 768fr); }
+  .about__body { gap: 96px; } /* 16 (odstęp akapitu) + 80 z projektu */
+}
+
+.about__media { padding-block: clamp(40px, 5.6vw, 80px) clamp(56px, 7.8vw, 112px); }
+
+/* Odtwarzacz wideo (placeholder → YouTube / MP4 po kliknięciu, js/pages/video.js) */
+.video {
+  position: relative; display: grid; place-items: center;
+  aspect-ratio: 1312 / 700; overflow: hidden;
+  background: #262626 var(--video-poster, none) center / cover no-repeat;
+}
+.video__play {
+  position: relative; display: grid; place-items: center;
+  width: clamp(120px, 14vw, 200px); aspect-ratio: 200 / 160; border-radius: 20px;
+}
+.video__play-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.video__play-icon { position: relative; width: clamp(48px, 4.5vw, 64px); height: auto; transition: transform .2s var(--ease); }
+.video__play:hover .video__play-icon, .video__play:focus-visible .video__play-icon { transform: scale(1.08); }
+.video__play:focus-visible { outline-color: var(--white); }
+.video__msg {
+  position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%);
+  max-width: calc(100% - 32px); font-size: 14px; line-height: 1.5; color: var(--white); text-align: center;
+}
+.video__msg:empty { display: none; }
+.video__player { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+
+/* ==========================================================================
+   POLITYKA PRYWATNOŚCI (Figma 367:2935)
+   ========================================================================== */
+.legal__header { padding-block: clamp(48px, 7.8vw, 112px) clamp(32px, 4.6vw, 80px); text-align: center; }
+.legal__header .container { display: grid; gap: clamp(12px, 1.7vw, 24px); }
+.legal__content { padding-bottom: clamp(56px, 7.8vw, 112px); padding-top: clamp(8px, 2.2vw, 32px); }
+.legal__prose { margin-inline: auto; }
+/* reset w styles.css zeruje marginesy tylko h1–h3 – h4–h6 dostają domyślny margin-bottom przeglądarki */
+.legal__prose :is(h4, h5, h6) { margin-bottom: 0; }
+.legal__prose p.lead { margin-top: 20px; font-size: clamp(18px, .3vw + 16px, 20px); line-height: 1.4; }
+.legal__prose blockquote { margin-block: 20px 32px; padding-left: 24px; line-height: 28px; }
+.legal__prose blockquote p { margin: 0; }
+
+/* ==========================================================================
+   CENTRUM POMOCY (Figma 767:1386)
+   ========================================================================== */
+.help__header { padding-block: clamp(40px, 5.6vw, 80px); }
+.help__header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.help__heading { display: grid; gap: 8px; min-width: 0; }
+.help__illustration { flex: none; width: clamp(60px, 7vw, 100px); height: auto; }
+@media (min-width: 1024px) { .help__illustration { margin-right: 86px; } } /* pr 80 + przesunięcie w ramce 112×80 */
+@media (max-width: 479.98px) { .help__illustration { display: none; } }
+
+.help__cards { display: grid; gap: 36px 40px; align-items: start; }
+@media (min-width: 900px) { .help__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.help-card {
+  padding: 20px;
+  background: var(--white); border: 1px solid #e7e7e7; border-radius: var(--radius);
+  filter: drop-shadow(0 12px 13px rgba(171, 171, 171, .09)) drop-shadow(0 47px 23.5px rgba(171, 171, 171, .08)) drop-shadow(0 107px 32px rgba(171, 171, 171, .04));
+}
+.help-card__title {
+  padding-block: 16px; margin-bottom: 0;
+  font-size: clamp(28px, 1.5vw + 18px, 40px); line-height: 1.2; font-weight: 700; color: var(--black);
+}
+.help-card__text {
+  margin-top: 0; padding-top: 24px; border-top: 1px solid var(--gray-200);
+  font-size: clamp(16px, .2vw + 15px, 18px); line-height: 1.5; color: var(--gray-600);
+}
+
+.help__links { padding-block: clamp(56px, 5.6vw, 80px); }
+.help__links-title { margin-bottom: clamp(24px, 3.3vw, 48px); font-size: clamp(20px, .4vw + 17px, 24px); line-height: 1.4; font-weight: 700; color: var(--black); }
+.help__lists { display: grid; gap: 0 64px; }
+@media (min-width: 900px) { .help__lists { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.shortcuts__row {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px;
+  padding-block: 20px; border-top: 1px solid #8a8a8a;
+}
+.shortcuts__label { font-size: 16px; line-height: 1.5; font-weight: 700; color: var(--black); }
+.shortcuts__row .link-arrow { margin-left: auto; }
+
+/* ==========================================================================
+   KONTAKT (Figma 400:15223)
+   ========================================================================== */
+.contact-page { background: var(--gray-25); }
+.contact-page__top { position: relative; isolation: isolate; overflow-x: clip; }
+.contact-page__map {
+  position: absolute; z-index: -1; top: 0; left: 0;
+  width: max(123.1%, 900px); max-width: none; height: auto; pointer-events: none;
+}
+.contact-page__header { padding-block: clamp(48px, 7.4vw, 106px); }
+.contact-page__intro p { color: var(--black); }
+
+.contact-page__main { padding-block: clamp(24px, 5.6vw, 80px) clamp(56px, 5.6vw, 80px); }
+.contact-page__grid { display: grid; gap: 40px 64px; align-items: center; }
+.contact-page__info { display: grid; gap: clamp(32px, 3.9vw, 56px); align-content: start; }
+@media (min-width: 1024px) {
+  .contact-page__grid { grid-template-columns: minmax(0, 480fr) minmax(0, 768fr); align-items: start; }
+  .contact-page__info { padding-block: 40px; }
+}
+
+/* Blok kontaktowy z lewą linią */
+.info-block {
+  display: grid; max-width: 320px;
+  padding: 0 20px 0 24px; border-left: 1px solid var(--gray-600);
+}
+.info-block__title { font-size: clamp(20px, .4vw + 17px, 24px); line-height: 1.3; font-weight: 700; color: var(--black); }
+.info-block__text { margin-top: 4px; font-size: 16px; line-height: 1.5; color: var(--gray-600); }
+.info-block__value { margin-top: 16px; font-size: 16px; line-height: 1.5; font-weight: 700; font-style: normal; color: var(--black); }
+.info-block__value a:hover { color: var(--orange-700); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Karta formularza „Napisz do nas” */
+.contact-card {
+  display: grid; gap: 24px; min-width: 0;
+  padding: clamp(24px, 4.45vw, 64px);
+  background: rgba(255, 255, 255, .95); border-radius: clamp(16px, 2.2vw, 32px);
+  box-shadow: 0 36px 39.5px rgba(163, 163, 163, .1), 0 144px 72px rgba(163, 163, 163, .09), 0 325px 97.5px rgba(163, 163, 163, .05);
+}
+.contact-card__head { display: grid; gap: 16px; max-width: 640px; }
+.contact-card__head p { font-size: clamp(16px, .2vw + 15px, 18px); line-height: 1.5; color: var(--black); }
+.contact-card__form { max-width: 640px; }
+.contact-card__form .field--check { padding-bottom: 16px; }
+.contact-card__form .btn--dark { font-weight: 500; letter-spacing: .02em; }
+.contact-card__form .form__status:empty { display: none; }
+@media (min-width: 1024px) { .contact-card { justify-self: end; width: 100%; max-width: 768px; } }
+
+/* Lokalizacja */
+.contact-page__location { padding-block: clamp(56px, 5.6vw, 80px); }
+.contact-page__location .page-intro { margin-bottom: clamp(40px, 5.6vw, 80px); }
+.location { display: grid; gap: 40px 80px; }
+.location__side { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
+.location__eu { width: 355px; max-width: 100%; height: auto; }
+.location__map {
+  position: relative; display: block; overflow: hidden;
+  height: clamp(280px, 33.4vw, 480px); background: #d9d9d9;
+}
+.location__map > img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.location__map:hover > img { transform: scale(1.03); }
+.location__map-label {
+  position: absolute; right: 16px; bottom: 16px;
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px;
+  background: var(--white); border-radius: var(--radius);
+  font-family: var(--font-alt); font-size: 14px; line-height: 20px; font-weight: 600; color: var(--orange-700);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+}
+.location__map:hover .location__map-label { text-decoration: underline; text-underline-offset: 3px; }
+.location__map:focus-visible { outline-offset: 4px; border-radius: 0; }
+@media (min-width: 900px) {
+  .location { grid-template-columns: minmax(0, 355px) minmax(0, 1fr); }
+  .location__side { padding-block: 40px; }
+}

@@ -1,0 +1,5 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Play Button">
+<path id="Vector" d="M20 0H180C191.046 0 200 8.954 200 20V140C200 151.046 191.046 160 180 160H20C8.954 160 0 151.046 0 140V20C0 8.954 8.954 0 20 0ZM91.7 112.2L130.6 86.2C132.696 84.834 133.96 82.502 133.96 80C133.96 77.498 132.696 75.166 130.6 73.8L91.7 47.8C89.403 46.248 86.438 46.089 83.988 47.387C81.539 48.685 80.005 51.228 80 54V106C80.005 108.772 81.539 111.315 83.988 112.613C86.438 113.911 89.403 113.752 91.7 112.2Z" fill-rule="evenodd" clip-rule="evenodd" fill="black" fill-opacity="0.15"/>
+</g>
+</svg>

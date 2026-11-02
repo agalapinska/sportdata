@@ -1,0 +1,24 @@
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="top">
+    <div class="navbar__inner">
+      <a class="navbar__logo" href="index.html" aria-label="Sport Data – strona główna">
+        <img src="assets/icons/logo.svg" width="188" height="48" alt="Sport Data">
+      </a>
+
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Menu główne">
+        <ul class="navbar__links">
+{{NAV_LINKS}}
+        </ul>
+        <div class="navbar__actions">
+          <a class="btn btn--secondary btn--lg" href="kontakt.html">{{CTA_LABEL}}</a>
+          <a class="btn btn--primary btn--lg btn--glow" href="tel:+48508582856">Zadzwoń</a>
+        </div>
+      </nav>
+    </div>
+  </header>

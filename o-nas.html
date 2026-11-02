@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O nas – Sport Data</title>
+  <meta name="description" content="Od 2003 roku SPORTDATA SERWIS Sp. z o.o. wprowadza na rynek innowacyjne systemy kontroli dostępu dla obiektów sportowych, biurowych i przemysłowych.">
+  <meta name="theme-color" content="#ed7c00">
+  <meta property="og:title" content="O nas – Sport Data">
+  <meta property="og:description" content="Od 2003 roku SPORTDATA SERWIS Sp. z o.o. wprowadza na rynek innowacyjne systemy kontroli dostępu dla obiektów sportowych, biurowych i przemysłowych.">
+  <meta property="og:image" content="assets/img/hero-card-960.webp">
+  <meta property="og:locale" content="pl_PL">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/info.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/video.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="top">
+    <div class="navbar__inner">
+      <a class="navbar__logo" href="index.html" aria-label="Sport Data – strona główna">
+        <img src="assets/icons/logo.svg" width="188" height="48" alt="Sport Data">
+      </a>
+
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Menu główne">
+        <ul class="navbar__links">
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="oferta.html#urzadzenia">Produkty</a></li>
+          <li><a href="realizacje.html">Realizacje</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pomoc.html">Pomoc</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a class="btn btn--secondary btn--lg" href="kontakt.html">Poznaj ofertę</a>
+          <a class="btn btn--primary btn--lg btn--glow" href="tel:+48508582856">Zadzwoń</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="about">
+
+    <!-- ============ O NAS – WSTĘP (Figma 767:1110) ============ -->
+    <section class="about__intro" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <h1 class="about__title" id="about-title">Od ponad 20 lat dajemy kontrolę nad tym co cenne - bezpieczeństwo.</h1>
+
+        <div class="about__body">
+          <div class="about__text">
+            <p>Od 2003 roku, SPORTDATA SERWIS Sp. z o.o. z powodzeniem wprowadza na rynek innowacyjne systemy i sprzęt dedykowany szerokiemu spektrum obiektów i wydarzeń. Jesteśmy firmą, która działa w większości z poleceń. Na samym początku specjalizowała się w ofercie na kontrolę dostępu do obiektów sportowych. Następnie rozszerzyła działania na obiekty podlegające pod ustawę BIM. Na dzień dzisiejszy są to działania w wielu sektorach w zakresie kontroli dostępów i rozwijamy się na kolejne kategorie produktowe z tego zakresu.</p>
+            <p>Przez ponad 20 lat obecności na rynku, wypracowaliśmy unikalny model działania, który pozwala na skrojenie naszej oferty na miarę potrzeb klientów z różnorodnych branż. Nasze modułowe systemy zapewniają elastyczność i możliwość dopasowania do nawet najbardziej wymagających specyfikacji.</p>
+          </div>
+
+          <ul class="about__facts" aria-label="Sport Data w liczbach">
+            <li>Ponad 200 zadowolonych klientów</li>
+            <li>Z naszych urządzeń korzysta ponad 2,5 mln osób rocznie</li>
+            <li>Rocznie instalujemy ponad 200 samych sprawdzarek</li>
+            <li>Ponad 3 000 zainstalowanych wszystkich urządzeń</li>
+            <li>58% stadionów ligowych korzysta z naszych urządzeń i systemów</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WIDEO (Figma 767:1129 „Placeholder / Lightbox”) ============ -->
+    <section class="about__media" aria-label="Film o firmie Sport Data">
+      <div class="container">
+        <!-- CMS: adres wideo – wpisz w data-video-src link YouTube (np. https://www.youtube.com/watch?v=XXXX lub https://youtu.be/XXXX) albo ścieżkę do pliku .mp4; opcjonalnie data-video-poster (miniatura). -->
+        <div class="video" data-video data-video-src="" data-video-title="Sport Data – film o firmie">
+          <button class="video__play" type="button" aria-label="Odtwórz film o firmie Sport Data">
+            <img class="video__play-bg" src="assets/icons/video-play-bg.svg" width="200" height="160" alt="">
+            <img class="video__play-icon" src="assets/icons/video-play.svg" width="64" height="64" alt="">
+          </button>
+          <p class="video__msg" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__main">
+          <address class="footer__contacts">
+            <div class="contact">
+              <img src="assets/icons/ic-phone.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">Telefon</h2>
+              <p class="contact__note">Jesteśmy dla Państwa dostępni <br class="br-md">od poniedziałku do piątku <br class="br-md">w godzinach 8-16.</p>
+              <p class="contact__value">
+                <a href="tel:+48508582856">tel. 508 582 856</a><br>
+                <a href="tel:+48585500183">tel./fax: 58/550 01 83</a>
+              </p>
+            </div>
+            <div class="contact">
+              <img src="assets/icons/ic-pin.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">Biuro</h2>
+              <p class="contact__note">W celu obejrzenia urządzeń umawiamy się z klientami indywidualnie.</p>
+              <p class="contact__value">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=ul.+Kasztanowa+13a,+81-515+Gdynia" target="_blank" rel="noopener">ul. Kasztanowa 13a,<br>81-515 Gdynia</a>
+              </p>
+            </div>
+            <div class="contact">
+              <img src="assets/icons/ic-mail.svg" width="20" height="20" alt="">
+              <h2 class="contact__title">E-mail</h2>
+              <p class="contact__note">Zachęcamy do załączenia od razu jak największej ilości informacji.</p>
+              <p class="contact__value"><a href="mailto:biuro@sportdata.pl">biuro@sportdata.pl</a></p>
+            </div>
+          </address>
+
+          <a class="footer__logo" href="index.html" aria-label="Sport Data – strona główna">
+            <img src="assets/icons/logo-white.svg" width="249" height="64" alt="Sport Data">
+            <img class="footer__tagline" src="assets/icons/logo-tagline.svg" width="222" height="10" alt="Open yourself to safety">
+          </a>
+        </div>
+
+        <div class="footer__side">
+          <nav class="footer__nav" aria-label="Menu w stopce">
+            <ul>
+              <li><a href="pomoc.html">Pomoc techniczna</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="oferta.html">Oferta</a></li>
+              <li><a href="oferta.html#urzadzenia">Produkty</a></li>
+              <li><a href="realizacje.html">Realizacje</a></li>
+            </ul>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="o-nas.html">O nas</a></li>
+              <li><a href="index.html">Strona główna</a></li>
+            </ul>
+          </nav>
+          <ul class="footer__social" aria-label="Media społecznościowe">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/ic-facebook.svg" width="24" height="24" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/ic-linkedin.svg" width="24" height="24" alt=""></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/ic-instagram.svg" width="24" height="24" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__credits">
+        <p>© 2025 Sportdata. All rights reserved.</p>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
