@@ -22,7 +22,7 @@ IMG = ROOT / "assets" / "img"
 
 MARK = "<!-- WYGENEROWANE przez tools/generate.py z data/*.json – nie edytuj ręcznie -->"
 ARROW = '<img src="assets/icons/arrow-orange.svg" width="20" height="20" alt="">'
-ARROW_W = '<img src="assets/icons/arrow-white.svg" width="20" height="20" alt="">'
+ARROW_W = '<img src="assets/icons/arrow-dark.svg" width="20" height="20" alt="">'
 CHEVRON = '<img src="assets/icons/chevron-right-24.svg" width="24" height="24" alt="">'
 QUOTE_TEXT = "Zostaw adres e-mail i opisz potrzeby – przygotujemy wycenę."
 

@@ -42,6 +42,6 @@
 
   {"slug": "ticketapi", "name": "TicketAPI", "category": "oprogramowanie", "type": "Aplikacja webowa", "image": "oferta/ticketapi", "lead": "Panel do zarządzania systemem kontroli dostępu – analizy i kontrola urządzeń dostępne z poziomu przeglądarki, także na telefonie.", "notes": ["Integracja z tablicą informacyjną LED i kamerami", "Integracja z automatami Iksoris"]},
   {"slug": "biletomat-selfpos", "name": "Biletomat SELFPOS", "category": "oprogramowanie", "type": "Oprogramowanie", "image": "oferta/selfpos", "lead": "Oprogramowanie do samoobsługowej sprzedaży biletów w automatach."},
-  {"slug": "smartphoto", "name": "Smartphoto", "category": "oprogramowanie", "type": "Aplikacja mobilna", "image": "oferta/smartphoto", "lead": "Aplikacja mobilna współpracująca z czytnikami Lite i sygnalizatorami LED, działająca również offline."}
+  {"slug": "smartphoto", "name": "SmartPhoto", "category": "oprogramowanie", "type": "Aplikacja mobilna", "image": "oferta/smartphoto", "lead": "Aplikacja mobilna współpracująca z czytnikami Lite i sygnalizatorami LED, działająca również offline."}
  ]
 }

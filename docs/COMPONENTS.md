@@ -29,8 +29,8 @@ do katalogu głównego (NIE edytuj wygenerowanych `*.html` w katalogu głównym)
 ## Tokeny (css/styles.css :root)
 Kolory: `--orange-900 #5f3200`, `--orange-700 #ed7c00` (brand), `--orange-600`, `--orange-500`, `--orange-100 #fdead5`, `--orange-50 #fff6ed`,
 `--gray-900 #050505`, `--gray-800 #161616`, `--gray-600 #373737`, `--gray-500 #484848`, `--gray-400 #696969`, `--gray-200 #cdcdcd`,
-`--gray-100 #e6e6e6`, `--gray-50 #f7f7f7`, `--light-grey #f4f4f4`.
-Fonty: `--font-base` Roboto, `--font-alt` Inter. Layout: `.container` (max 1312 + gutter 20→64px), `.section` (padding 56→80px).
+`--gray-100 #e6e6e6`, `--gray-50 #f7f7f7`, `--light-grey #f4f4f4`, `--gray-700 #262626`, `--orange-800 #be6300`, tło strony `--page-bg #fbfbfb`, tekst `--black #161616`.
+Fonty: tylko Roboto (300/400/500/700) – `--font-alt` wskazuje też na Roboto (SD Brand system). Layout: `.container` (max 1312 + gutter 20→64px), `.section` (padding 56→80px).
 Promień `--radius 8px`. Breakpointy: 560 / 768 / 900 / 1024 / 1200 px (mobile-first, `min-width`).
 
 ## Gotowe klasy
@@ -83,3 +83,11 @@ Promień `--radius 8px`. Breakpointy: 560 / 768 / 900 / 1024 / 1200 px (mobile-f
 - Linki: oferta.html, produkt-<slug>.html, usluga-<slug>.html, realizacje.html, realizacja-<slug>.html (generowane: tools/generate.py), blog.html, wpis.html, pomoc.html,
   centrum-pomocy.html, kontakt.html, o-nas.html, polityka-prywatnosci.html, tagi: `realizacje.html?tag=<slug>`.
 - Tekst po polsku tak jak w Figmie (łącznie z lorem ipsum). Adnotacje z Figmy → zachowanie w kodzie lub komentarz `<!-- CMS: … -->`.
+
+## Zasady marki (SD: Brand system – źródło prawdy)
+- Nagłówki Roboto **Medium 500**, letter-spacing −2% (H4 −1,5%); skala web: H2 56/64, H3 40/48, H4 32/36 (mobile 36/44, 28/32, 24/28).
+- Tekst: Roboto 400, +2% (`body`); przyciski Roboto 500 18/20 lub 20/24, +4%; etykiety i tagi 0%.
+- Pomarańcz #ED7C00 tylko jako akcent (słowo-klucz w nagłówku, ikony, przyciski, podkreślenia). **Nie** jako kolor zwykłego tekstu/linków na jasnym tle (kontrast 2,72:1) – linki `.link-arrow` są ciemne z pomarańczowym podkreśleniem; tekst na przycisku pomarańczowym = #161616.
+- Brak czystej czerni (#161616) i czystej bieli w tle strony (#FBFBFB); ciemne sekcje #262626.
+- Promień zaokrągleń maks. 8 px; cienie bardzo miękkie.
+- Copy: forma „Ty/Twój/Ci” (wielką literą), strona czynna, fakty zamiast ogólników. Nazwy: „Sport Data”, „TicketAPI”, „SmartPhoto”.
