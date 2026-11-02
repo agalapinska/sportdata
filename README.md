@@ -14,6 +14,9 @@ npx serve .
 ```
 src/pages/*.html    – źródła stron (blok metadanych <!--page {...}--> + <main>)
 src/partials/       – wspólna nawigacja (header.html) i stopka (footer.html)
+data/*.json         – dane: produkty.json (kategorie + produkty), realizacje.json, uslugi.json
+tools/generate.py   – generuje z data/*.json strony źródłowe w src/pages (produkt-*, usluga-*,
+                      realizacja-*, oferta.html, lista w realizacje.html) – nie edytuj ich ręcznie
 tools/build.py      – składa strony do katalogu głównego:  python3 tools/build.py [nazwa ...]
 tools/img.py        – optymalizacja zdjęć do WebP (kilka szerokości, opcjonalny kadr)
 *.html              – WYGENEROWANE strony (nie edytować ręcznie)
@@ -24,7 +27,8 @@ assets/img, icons   – zdjęcia WebP (srcset/sizes) i SVG z Figmy
 docs/COMPONENTS.md  – katalog komponentów i konwencji
 ```
 
-Po zmianie czegokolwiek w `src/` uruchom `python3 tools/build.py`.
+Po zmianie danych w `data/` uruchom `python3 tools/generate.py && python3 tools/build.py`;
+po zmianie innych plików w `src/` wystarczy `python3 tools/build.py`.
 
 ## Responsywność
 - Breakpointy: 560 / 768 / 900 / 1024 / 1200 px; projekt desktopowy 1440 px (kontener 1312 px).
@@ -37,7 +41,7 @@ Po zmianie czegokolwiek w `src/` uruchom `python3 tools/build.py`.
 ## Uwagi z komentarzy w Figmie
 - **Sierotki** – `js/main.js` globalnie wstawia twardą spację po krótkich słowach („z, i, w, do, od, bo, więc…”).
   W CMS warto robić to też po stronie serwera (np. filtr treści).
-- **Tagi produktów** linkują do `realizacje.html?tag=…` (filtr realizacji po tagu), a tagi w realizacjach do `produkty.html?produkt=…`.
+- **Tagi produktów** linkują do `realizacje.html?tag=…` (filtr realizacji po tagu), a tagi produktów w realizacjach do `produkt-<slug>.html`.
 - **Opinie** – karta jest linkiem do opinii w Google (do uzupełnienia `href`); jeśli brak danych autora, wiersz autora jest pomijany.
 - Podstrony (`oferta.html`, `produkty.html`, `realizacje.html`, `blog.html`, `pomoc.html`, `kontakt.html`, `polityka-prywatnosci.html`) są podlinkowane, ale jeszcze nie zaimplementowane.
 - Do dodania wg adnotacji w nawigacji: wyszukiwarka, przełącznik języka, rozwijane mega-menu.
@@ -46,11 +50,11 @@ Po zmianie czegokolwiek w `src/` uruchom `python3 tools/build.py`.
 | Plik | Ramka w Figmie |
 |---|---|
 | index.html | home (367:1111) |
-| oferta.html | produkty (383:4212) – sekcje #urzadzenia, #parking, #oprogramowanie, #indywidualne |
-| produkt.html | produkt (367:2140) |
-| usluga.html | usługa (912:1741) |
-| realizacje.html | realizacje (739:3077) – filtr `?tag=` |
-| realizacja.html | realizacja (367:2449) |
+| oferta.html | produkty (383:4212) – generowana; sekcje kategorii (#kontrola-dostepu, #kolowroty, #parking, #automaty, #oprogramowanie; całość w #urzadzenia) i #uslugi |
+| produkt-*.html (28) | produkt (367:2140) – generowane z data/produkty.json |
+| usluga-*.html (6) | usługa (912:1741) – generowane z data/uslugi.json |
+| realizacje.html | realizacje (739:3077) – filtr `?tag=`; lista generowana z data/realizacje.json |
+| realizacja-*.html (8) | realizacja (367:2449) – generowane z data/realizacje.json |
 | blog.html | blog (394:14486) |
 | wpis.html | wpis blogowy (367:3083) |
 | o-nas.html | o nas (767:1094) – link w stopce |

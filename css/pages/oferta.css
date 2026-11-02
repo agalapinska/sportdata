@@ -143,3 +143,31 @@
   .svc { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 5.6vw, 80px); }
   .svc__aside { padding-top: 80px; position: sticky; top: calc(var(--nav-h) - 56px); }
 }
+
+/* ==========================================================================
+   Dodatki dla stron generowanych z data/*.json (tools/generate.py)
+   ========================================================================== */
+/* Specyfikacja produktu (akordeon) */
+.spec { display: grid; gap: 12px; margin: 0; }
+.spec > div { display: grid; gap: 4px; }
+.spec dt { font-weight: 600; color: var(--black); }
+.spec dd { margin: 0; }
+.spec ul { padding-left: 1.2em; list-style: disc; }
+.spec li + li { margin-top: 4px; }
+@media (min-width: 560px) { .spec > div { grid-template-columns: 180px minmax(0, 1fr); gap: 16px; } }
+
+/* Usługi pogrupowane (Serwis / Personalizacja) */
+.services__group {
+  margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--gray-200);
+  font-size: clamp(20px, .4vw + 17px, 24px); line-height: 1.3; font-weight: 600; color: var(--gray-600);
+}
+
+/* Logo klienta na jasnym panelu (realizacje bez zdjęcia) */
+.logo-panel { display: grid; place-items: center; background: var(--white); border: 1px solid var(--gray-100); }
+.logo-panel > img.logo-panel__img {
+  width: auto; height: auto; max-width: min(60%, 240px); max-height: 50%; object-fit: contain;
+}
+.showcase__row:hover .logo-panel > img.logo-panel__img,
+.case-card:hover .logo-panel > img.logo-panel__img { transform: none; }
+.cases-grid .case-card__media { overflow: hidden; background: var(--gray-100); }
+.cases-grid .case-card__media > img:not(.logo-panel__img) { width: 100%; height: 100%; object-fit: cover; }

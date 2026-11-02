@@ -160,3 +160,28 @@
 .other-cases { background: var(--white); }
 .other-cases__list { display: grid; gap: 56px 48px; }
 @media (min-width: 768px) { .other-cases__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ==========================================================================
+   Dodatki dla stron generowanych z data/*.json (tools/generate.py)
+   ========================================================================== */
+/* Logo klienta na jasnym panelu (realizacje bez zdjęcia) */
+.logo-panel { display: grid; place-items: center; background: var(--white); border: 1px solid var(--gray-100); }
+.logo-panel > img.logo-panel__img {
+  width: auto; height: auto; max-width: min(60%, 240px); max-height: 50%; object-fit: contain;
+}
+.realization:hover .logo-panel > img.logo-panel__img { transform: none; }
+
+/* Nagłówek realizacji z logo zamiast zdjęcia */
+.case-logo {
+  height: clamp(160px, 18vw, 260px); margin-top: 8px; border-radius: var(--radius);
+}
+.case-logo > img.logo-panel__img { max-height: 55%; }
+
+/* Zakres prac */
+.case-prose .lead + h2 { margin-top: 24px; }
+
+/* Produkty w realizacji: zdjęcia i produkty archiwalne (bez linku) */
+.case-product__media { display: block; overflow: hidden; background: var(--gray-100); }
+.case-product__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.case-product:hover .case-product__media img { transform: scale(1.04); }
+.case-product--legacy:hover .case-product__media { background: var(--gray-100); }

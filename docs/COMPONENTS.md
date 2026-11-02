@@ -80,6 +80,6 @@ Promień `--radius 8px`. Breakpointy: 560 / 768 / 900 / 1024 / 1200 px (mobile-f
 - Mobile-first, bez poziomego przewijania od 320 px; siatki przez `grid` + `repeat(auto-fill, minmax(min(100%, Xpx), 1fr))` lub breakpointy.
 - Zdjęcia: `tools/img.py` → WebP w `assets/img/<strona>/`, `srcset` + `sizes`, `width`/`height`, `loading="lazy"` (poza LCP).
 - Kadry z Figmy (procentowe `left/top/w/h` obrazka) przelicz na `--crop`; warstwy nałożone – użyj górnej.
-- Linki: oferta.html, produkt.html, usluga.html, realizacje.html, realizacja.html, blog.html, wpis.html, pomoc.html,
+- Linki: oferta.html, produkt-<slug>.html, usluga-<slug>.html, realizacje.html, realizacja-<slug>.html (generowane: tools/generate.py), blog.html, wpis.html, pomoc.html,
   centrum-pomocy.html, kontakt.html, o-nas.html, polityka-prywatnosci.html, tagi: `realizacje.html?tag=<slug>`.
 - Tekst po polsku tak jak w Figmie (łącznie z lorem ipsum). Adnotacje z Figmy → zachowanie w kodzie lub komentarz `<!-- CMS: … -->`.
