@@ -1,6 +1,6 @@
-# Sport Data – strona główna
+# Sport Data – strona internetowa
 
-Statyczna, responsywna implementacja strony głównej z projektu Figma (`WEB_SD` → sekcja „strona główna”, ramka `home`).
+Statyczna, responsywna implementacja serwisu Sport Data (12 stron) z projektu Figma `WEB_SD`.
 Bez frameworków i kroku budowania – czysty HTML + CSS + JS.
 
 ## Uruchomienie
