@@ -1,0 +1,47 @@
+{
+ "categories": [
+  {"slug": "kontrola-dostepu", "name": "Urządzenia do kontroli dostępu", "lead": "Sprawdzarki, czytniki i sygnalizatory do skanowania biletów, kodów i kart oraz informowania o statusie biletu."},
+  {"slug": "kolowroty", "name": "Kołowroty i bramki", "lead": "Regulują przepływ ruchu. W zależności od potrzeb warto wziąć pod uwagę kołowroty niskie, wysokie lub śluzę."},
+  {"slug": "parking", "name": "Zarządzanie parkingiem", "lead": "Kolumny parkingowe, szlabany i systemy LPR przyspieszają wjazd i wyjazd pojazdów oraz umożliwiają pobranie opłaty."},
+  {"slug": "automaty", "name": "Automaty biletowe i płatnicze", "lead": "Szerokie możliwości personalizacji i modułowa budowa pozwalają na ciągłe wprowadzanie zmian."},
+  {"slug": "oprogramowanie", "name": "Oprogramowanie", "lead": "Oprogramowanie do kontroli dostępu centralizuje zarządzanie uprawnieniami i umożliwia pełną kontrolę nad dostępem w czasie rzeczywistym."}
+ ],
+ "products": [
+  {"slug": "sprawdzarka-modulo6-box", "name": "Sprawdzarka modulo6 BOX", "category": "kontrola-dostepu", "type": "Urządzenie", "mount": "Montaż uniwersalny", "image": "oferta/sprawdzarka", "lead": "Sprawdzarka biletowa do kontroli wejść. Nasze sprawdzarki obsługują na obiektach rocznie ponad 2,5 mln osób."},
+  {"slug": "sprawdzarka-dualna-startrek", "name": "Sprawdzarka dualna (STARTREK)", "category": "kontrola-dostepu", "type": "Urządzenie", "image": "oferta/dwustronna", "lead": "Dwustronna sprawdzarka biletowa – obsługa wejścia i wyjścia w jednym urządzeniu."},
+  {"slug": "czytnik-modulo6-lite", "name": "Czytnik modulo6 lite", "category": "kontrola-dostepu", "type": "Urządzenie", "mount": "Montaż uniwersalny", "image": "oferta/czytnik", "hero": "produkt/czytnik-lite", "lead": "Czytnik obsługuje RFID i kody 1D/2D. Jest odporny na warunki atmosferyczne i wandalizm, działa online i offline. Wyposażony jest w matrycę LED do wyświetlania komunikatów."},
+  {"slug": "rabatownik", "name": "Rabatownik (wariacja Lite)", "category": "kontrola-dostepu", "type": "Urządzenie", "lead": "Wariant czytnika Lite do naliczania rabatów, np. na parkingu."},
+  {"slug": "syg3", "name": "SYG3 – piktogram dla ochrony", "category": "kontrola-dostepu", "type": "Urządzenie", "image": "oferta/sygnalizatory", "lead": "Sygnalizator przekazujący informacje o statusie biletu i wspierający pracę ochrony czytelnymi komunikatami."},
+  {"slug": "slupek-z-rfid", "name": "Słupek z RFID", "category": "kontrola-dostepu", "type": "Urządzenie", "image": "oferta/slupek", "lead": "Słupek kontrolny z czytnikiem RFID."},
+  {"slug": "palmtopy-zebra", "name": "Palmtopy Zebra", "category": "kontrola-dostepu", "type": "Urządzenie", "image": "oferta/palmtop", "lead": "Mobilna kontrola biletów – palmtopy do skanowania kodów w dowolnym miejscu obiektu."},
+
+  {"slug": "kolowrot-wysoki-pojedynczy", "name": "Kołowrót wysoki pojedynczy", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"], "image": "oferta/kolowrot-wysoki"},
+  {"slug": "kolowrot-wysoki-podwojny", "name": "Kołowrót wysoki podwójny", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"], "image": "oferta/kolowrot-wysoki"},
+  {"slug": "bramka-niska-pojedyncza-krotka", "name": "Bramka niska pojedyncza (krótka)", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"], "image": "oferta/kolowrot-niski"},
+  {"slug": "bramka-niska-pojedyncza-dluga", "name": "Bramka niska pojedyncza (długa)", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"], "image": "oferta/kolowrot-niski"},
+  {"slug": "bramka-niska-podwojna-krotka", "name": "Bramka niska podwójna (krótka)", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"], "image": "oferta/kolowrot-niski"},
+  {"slug": "bramka-niska-podwojna-dluga", "name": "Bramka niska podwójna (długa)", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"], "image": "oferta/kolowrot-niski"},
+  {"slug": "bramka-sensoryczna", "name": "Bramka sensoryczna", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"]},
+  {"slug": "bramka-uchylna", "name": "Bramka uchylna", "category": "kolowroty", "type": "Kołowrót", "makers": ["GASTOP", "JAWA", "KABA"]},
+
+  {"slug": "kolumna-parkingowa-tp6", "name": "Kolumna parkingowa TP6", "category": "parking", "type": "Urządzenie", "mount": "Montaż uniwersalny", "image": "oferta/kolumna", "lead": "Przyspiesza wjazd i wyjazd pojazdów na teren i umożliwia pobranie opłaty.", "notes": ["Integracja z automatami Iksoris"]},
+  {"slug": "lpr", "name": "System LPR", "category": "parking", "type": "Urządzenie", "image": "oferta/kamera", "lead": "Odczytywanie tablic rejestracyjnych redukuje kolejki samochodów do wjazdu i zużycie energii systemów.", "notes": ["Współpracuje z tablicą informacyjną LED"]},
+  {"slug": "szlaban-came-gt4", "name": "Szlaban CAME GT4", "category": "parking", "type": "Urządzenie", "makers": ["CAME"], "image": "oferta/szlaban"},
+  {"slug": "szlaban-came-gt8", "name": "Szlaban CAME GT8", "category": "parking", "type": "Urządzenie", "makers": ["CAME"], "image": "oferta/szlaban"},
+  {"slug": "szlaban-came-ls4", "name": "Szlaban CAME LS4", "category": "parking", "type": "Urządzenie", "makers": ["CAME"], "image": "oferta/szlaban"},
+  {"slug": "szlaban-came-px", "name": "Szlaban CAME PX", "category": "parking", "type": "Urządzenie", "makers": ["CAME"], "image": "oferta/szlaban"},
+
+  {"slug": "automat-21-5-gotowka", "name": "Automat 21,5\" gotówka", "category": "automaty", "type": "Urządzenie", "image": "home/produkt-automat",
+   "lead": "Automat Sport Data z ekranem 21,5\" przyjmujący płatności gotówkowe.",
+   "features": ["Możliwość montażu na zewnątrz", "Możliwość montażu wewnątrz budynku", "Miejsce na 1 drukarkę", "Obsługiwane drukarki: Postnet, Sanei (bez możliwości montażu drukarki Boca)"]},
+  {"slug": "automat-21-5-softcom", "name": "Automat 21,5\" SOFTCOM", "category": "automaty", "type": "Urządzenie", "image": "home/produkt-automat", "lead": "Automat z ekranem 21,5\" w wersji SOFTCOM."},
+  {"slug": "automat-iksoris-32", "name": "Automat Iksoris bezgotówka 32\"", "category": "automaty", "type": "Urządzenie",
+   "lead": "Automat bezgotówkowy z ekranem 32\".",
+   "features": ["Możliwość montażu na zewnątrz", "Możliwość montażu wewnątrz budynku", "Miejsce na 3 drukarki jednocześnie", "Obsługiwane drukarki: Boca, Postnet, Sanei"]},
+  {"slug": "automat-nexus", "name": "Automat Nexus", "category": "automaty", "type": "Urządzenie", "lead": "Automat biletowy Nexus."},
+
+  {"slug": "ticketapi", "name": "TicketAPI", "category": "oprogramowanie", "type": "Aplikacja webowa", "image": "oferta/ticketapi", "lead": "Panel do zarządzania systemem kontroli dostępu – analizy i kontrola urządzeń dostępne z poziomu przeglądarki, także na telefonie.", "notes": ["Integracja z tablicą informacyjną LED i kamerami", "Integracja z automatami Iksoris"]},
+  {"slug": "biletomat-selfpos", "name": "Biletomat SELFPOS", "category": "oprogramowanie", "type": "Oprogramowanie", "image": "oferta/selfpos", "lead": "Oprogramowanie do samoobsługowej sprzedaży biletów w automatach."},
+  {"slug": "smartphoto", "name": "Smartphoto", "category": "oprogramowanie", "type": "Aplikacja mobilna", "image": "oferta/smartphoto", "lead": "Aplikacja mobilna współpracująca z czytnikami Lite i sygnalizatorami LED, działająca również offline."}
+ ]
+}

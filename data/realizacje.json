@@ -1,0 +1,161 @@
+[
+ {
+  "slug": "targi-kielce",
+  "name": "Targi Kielce",
+  "city": "Kielce",
+  "status": "W realizacji",
+  "lead": "Bramy parkingowe i wyjścia z terminali wschodniego i zachodniego.",
+  "scope": [
+   "4 automaty biletowe SELFPOS przy terminalach",
+   "10 automatów parkingowych",
+   "13 szlabanów",
+   "Kontrola dostępu z czytnikami modulo LITE"
+  ],
+  "products": [
+   "kolumna-parkingowa-tp6",
+   "ticketapi",
+   "sprawdzarka-modulo6-box",
+   "czytnik-modulo6-lite",
+   "biletomat-selfpos",
+   "automat-iksoris-32"
+  ],
+  "image": "realizacja-kielce",
+  "tags": [
+   "hala-targowa",
+   "parking"
+  ]
+ },
+ {
+  "slug": "westerplatte",
+  "name": "Westerplatte",
+  "city": "Gdańsk",
+  "status": "W realizacji",
+  "lead": "Kompleksowe wdrożenie systemu parkingowego: dostawa, montaż i konfiguracja urządzeń objętych ofertą.",
+  "scope": [
+   "3 kolumny parkingowe",
+   "4 szlabany",
+   "Gwarancja 108 miesięcy"
+  ],
+  "products": [
+   "kolumna-parkingowa-tp6",
+   "slupek-z-rfid",
+   "automat-21-5-gotowka",
+   "automat-21-5-softcom",
+   "szlaban-came-gt4",
+   "automat-iksoris-32"
+  ],
+  "tags": [
+   "parking",
+   "obiekt-turystyczny"
+  ]
+ },
+ {
+  "slug": "hala-urania-olsztyn",
+  "name": "Hala Urania Olsztyn",
+  "city": "Olsztyn",
+  "status": "W realizacji",
+  "lead": "System parkingowy hali widowiskowo-sportowej z automatami płatniczymi gotówkowymi i bezgotówkowymi.",
+  "scope": [
+   "2 szlabany CAME GT",
+   "6 szlabanów CAME PX",
+   "Maksymalna wysokość ramienia szlabanu: 2,50 m"
+  ],
+  "products": [
+   "szlaban-came-gt4",
+   "szlaban-came-px",
+   "automat-21-5-gotowka",
+   "automat-21-5-softcom",
+   "automat-iksoris-32"
+  ],
+  "tags": [
+   "hala-sportowa",
+   "parking"
+  ]
+ },
+ {
+  "slug": "kielce-parking",
+  "name": "Parking wielopoziomowy w Kielcach",
+  "city": "Kielce",
+  "status": "",
+  "lead": "Obsługa wielopoziomowego parkingu oraz depozytory na przesyłki (kurierbox).",
+  "scope": [
+   "Parking wielopoziomowy",
+   "Depozytory – kurierbox"
+  ],
+  "products": [],
+  "tags": [
+   "parking",
+   "przechowanie-paczek"
+  ]
+ },
+ {
+  "slug": "ecs",
+  "name": "ECS",
+  "city": "Gdańsk",
+  "status": "Zakończona",
+  "lead": "Pokazowy zestaw urządzeń w czarnym macie – kolumny parkingowe i automat.",
+  "scope": [
+   "Kolumny parkingowe w wykończeniu czarny mat",
+   "Automat płatniczy"
+  ],
+  "products": [
+   "kolumna-parkingowa-tp6",
+   "automat-21-5-softcom"
+  ],
+  "legacy": [
+   "Sprawdzarka (poprzednia generacja)"
+  ],
+  "tags": [
+   "muzeum",
+   "parking"
+  ]
+ },
+ {
+  "slug": "muzeum-ii-wojny-swiatowej",
+  "name": "Muzeum II Wojny Światowej",
+  "city": "Gdańsk",
+  "status": "Zakończona",
+  "lead": "Kontrola biletów przy wejściu do muzeum.",
+  "scope": [],
+  "products": [],
+  "legacy": [
+   "Sprawdzarka biletowa (poprzednia generacja)"
+  ],
+  "logo": "logo-mw",
+  "tags": [
+   "muzeum"
+  ]
+ },
+ {
+  "slug": "polsat-plus-arena",
+  "name": "Polsat Plus Arena Gdańsk",
+  "city": "Gdańsk",
+  "status": "",
+  "lead": "Kontrola dostępu na stadionie z wykorzystaniem sprawdzarek biletowych modulo.",
+  "scope": [],
+  "products": [],
+  "legacy": [
+   "Sprawdzarka modulo (poprzednia generacja)"
+  ],
+  "logo": "logo-polsat",
+  "tags": [
+   "stadion"
+  ]
+ },
+ {
+  "slug": "opole",
+  "name": "Opole",
+  "city": "Opole",
+  "status": "",
+  "lead": "Dostawa palmtopów Zebra do kontroli biletów wraz ze szkoleniem obsługi.",
+  "scope": [
+   "Szkolenie personelu z obsługi urządzeń"
+  ],
+  "products": [
+   "palmtopy-zebra"
+  ],
+  "tags": [
+   "stadion"
+  ]
+ }
+]

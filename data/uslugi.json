@@ -1,0 +1,14 @@
+[
+  {"slug": "przeglady-konserwacyjne", "name": "Przeglądy konserwacyjne roczne w okresie gwarancji", "group": "Serwis",
+   "lead": "Coroczne przeglądy konserwacyjne urządzeń w okresie gwarancji – sprawdzamy stan techniczny, czyścimy i kalibrujemy urządzenia, aby system działał niezawodnie."},
+  {"slug": "montaz-demontaz-terminali", "name": "Montaż i demontaż terminali parkingowych", "group": "Serwis",
+   "lead": "Demontaż i ponowny montaż terminali (kolumn parkingowych) wykonywany przez dwuosobowy zespół serwisu. Na czas prac zapewniamy obudowy zastępcze."},
+  {"slug": "montaz-napedu-do-bram", "name": "Montaż napędu do bram", "group": "Serwis",
+   "lead": "Montaż i podłączenie napędów do bram wjazdowych oraz ich integracja z systemem kontroli dostępu."},
+  {"slug": "transport", "name": "Transport", "group": "Serwis",
+   "lead": "Transport urządzeń na miejsce instalacji i z powrotem – również w przypadku prac serwisowych."},
+  {"slug": "projektowanie-oklejenia", "name": "Projektowanie oklejenia", "group": "Personalizacja",
+   "lead": "Projekt oklejenia urządzeń w identyfikacji wizualnej obiektu lub wydarzenia."},
+  {"slug": "personalizacje", "name": "Personalizacje", "group": "Personalizacja",
+   "lead": "Od kształtu po malowanie – dostosowujemy wygląd i funkcje urządzeń do potrzeb obiektu."}
+]
