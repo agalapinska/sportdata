@@ -66,3 +66,9 @@ po zmianie innych plików w `src/` wystarczy `python3 tools/build.py`.
 - Treści-zaślepki z Figmy (lorem ipsum, „Project name here”, „Variant”, „Subscribe to receive…”), szare pola zdjęć.
 - Wysyłka formularzy (`js/main.js`, TODO), adres wideo na „O nas”, mapa (iframe po decyzji o zgodach cookies).
 - Linki do opinii Google, profili społecznościowych i logo UE; paginacja bloga (`?strona=`) i filtr tagów po stronie serwera.
+
+## Deploy (GitHub Pages)
+Workflow `.github/workflows/deploy.yml` przy każdym pushu na `main` uruchamia `tools/generate.py` i `tools/build.py`,
+a następnie publikuje wyłącznie gotowe pliki (`*.html`, `assets/`, `css/`, `js/`) na GitHub Pages.
+Jednorazowo: *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
+Ręczne uruchomienie: zakładka *Actions → Deploy na GitHub Pages → Run workflow*.
